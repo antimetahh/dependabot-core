@@ -29,7 +29,7 @@ PATH
       excon (~> 1.2)
       faraday (~> 2.7)
       faraday-retry (~> 2.2)
-      gitlab (~> 5.0)
+      gitlab (>= 5, < 7)
       json (< 2.12)
       nokogiri (~> 1.8)
       octokit (~> 7.2)
@@ -214,7 +214,7 @@ GEM
     aws-sigv4 (1.8.0)
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.2.0)
-    bigdecimal (3.2.2)
+    bigdecimal (3.3.1)
     citrus (3.0.2)
     commonmarker (2.3.1)
       rb_sys (~> 0.9)
@@ -228,7 +228,7 @@ GEM
     crack (1.0.0)
       bigdecimal
       rexml
-    csv (3.3.0)
+    csv (3.3.5)
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
@@ -252,7 +252,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     flamegraph (0.9.5)
-    gitlab (5.1.0)
+    gitlab (6.0.0)
       base64 (~> 0.2.0)
       httparty (~> 0.20)
       terminal-table (>= 1.5.1)
@@ -297,7 +297,7 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    httparty (0.22.0)
+    httparty (0.23.2)
       csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -318,7 +318,7 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    multi_xml (0.7.1)
+    multi_xml (0.7.2)
       bigdecimal (~> 3.1)
     netrc (0.11.0)
     nokogiri (1.18.9)
@@ -607,7 +607,7 @@ CHECKSUMS
   aws-sdk-ecr (1.68.0) sha256=86763b7291170dc6dbbf827f35d4142683622e68d7dff6719eeb98b13b677e80
   aws-sigv4 (1.8.0) sha256=84dd99768b91b93b63d1d8e53ee837cfd06ab402812772a7899a78f9f9117cbc
   base64 (0.2.0) sha256=0f25e9b21a02a0cc0cea8ef92b2041035d39350946e8789c562b2d1a3da01507
-  bigdecimal (3.2.2) sha256=39085f76b495eb39a79ce07af716f3a6829bc35eb44f2195e2753749f2fa5adc
+  bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
   citrus (3.0.2) sha256=4ec2412fc389ad186735f4baee1460f7900a8e130ffe3f216b30d4f9c684f650
   commonmarker (2.3.1) sha256=8943ef0731a4205765b1ab8f25a7a9b9f62acb28b0054c7d60f06720a23cadc7
   commonmarker (2.3.1-aarch64-linux) sha256=43b940cb5a4d59378c68d1dcf4480b4223817aaf53acebe262467eca8dd14807
@@ -618,7 +618,7 @@ CHECKSUMS
   commonmarker (2.3.1-x86_64-linux-musl) sha256=70556fce0bc3f67026e5a20ea9881080755cae80d165374c88498402ba9536a5
   concurrent-ruby (1.2.3) sha256=82fdd3f8a0816e28d513e637bb2b90a45d7b982bdf4f3a0511722d2e495801e2
   crack (1.0.0) sha256=c83aefdb428cdc7b66c7f287e488c796f055c0839e6e545fec2c7047743c4a49
-  csv (3.3.0) sha256=0bbd1defdc31134abefed027a639b3723c2753862150f4c3ee61cab71b20d67d
+  csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
   debug (1.9.2) sha256=48e026c0852c7a10c60263e2e527968308958e266231e36d64e3efcabec7e7fc
   dependabot-bun (0.335.0)
   dependabot-bundler (0.335.0)
@@ -659,7 +659,7 @@ CHECKSUMS
   ffi (1.15.5) sha256=6f2ed2fa68047962d6072b964420cba91d82ce6fa8ee251950c17fca6af3c2a0
   ffi-compiler (1.0.1) sha256=019f389b078a2fec9de7f4f65771095f80a447e34436b4588bcb629e2a564c30
   flamegraph (0.9.5) sha256=a683020637ffa0e14a72640fa41babf14d926bfeaed87e31907cfd06ab2de8dc
-  gitlab (5.1.0) sha256=021c27807a98f379c0cfeda459327c026d3756dbd6531dc1479f0e3df03572c7
+  gitlab (6.0.0) sha256=be8e096775b84fb331f9e91b201b4356c3159eec6b0c7c4e157c46a02305a93a
   google-protobuf (4.31.1) sha256=022bc82931a0860a7f2ace41bd48e904c8e65032c1d5eefc33294b5edf9741f8
   google-protobuf (4.31.1-aarch64-linux-gnu) sha256=d5b8268b2e07776b15a73ed96ca416eab771821b162b239dbdbfb2c85e2d17e5
   google-protobuf (4.31.1-aarch64-linux-musl) sha256=fcd5b79ac4048e89e44c4c64fb432fa6400ec3c2f0344a7effa95fbc6895d24a
@@ -676,7 +676,7 @@ CHECKSUMS
   http-accept (1.7.0) sha256=c626860682bfbb3b46462f8c39cd470fd7b0584f61b3cc9df5b2e9eb9972a126
   http-cookie (1.0.5) sha256=73756d46c7dbdc7023deecdb8a171348ea95a1b99810b31cfe8b4fb4e9a6318f
   http-form_data (2.3.0) sha256=cc4eeb1361d9876821e31d7b1cf0b68f1cf874b201d27903480479d86448a5f3
-  httparty (0.22.0) sha256=78652a5c9471cf0093d3b2083c2295c9c8f12b44c65112f1846af2b71430fa6c
+  httparty (0.23.2) sha256=72d52830ab5862115a3c9a4b16738dd67d9a691ffd796cf86bad8abaa8f1febb
   io-console (0.8.0) sha256=cd6a9facbc69871d69b2cb8b926fc6ea7ef06f06e505e81a64f14a470fddefa2
   irb (1.12.0) sha256=07634937fbb7d28d07e46da50d0aa43b4d2f7258174d08de4e32dfb57c10539d
   jmespath (1.6.2) sha256=238d774a58723d6c090494c8879b5e9918c19485f7e840f2c1c7532cf84ebcb1
@@ -689,7 +689,7 @@ CHECKSUMS
   mime-types-data (3.2022.0105) sha256=d8c401ba9ea8b648b7145b90081789ec714e91fd625d82c5040079c5ea696f00
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
   mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
-  multi_xml (0.7.1) sha256=4fce100c68af588ff91b8ba90a0bb3f0466f06c909f21a32f4962059140ba61b
+  multi_xml (0.7.2) sha256=307a96dc48613badb7b2fc174fd4e62d7c7b619bc36ea33bfd0c49f64f5787ce
   netrc (0.11.0) sha256=de1ce33da8c99ab1d97871726cba75151113f117146becbe45aa85cb3dabee3f
   nokogiri (1.18.9) sha256=ac5a7d93fd0e3cef388800b037407890882413feccca79eb0272a2715a82fa33
   nokogiri (1.18.9-aarch64-linux-gnu) sha256=5bcfdf7aa8d1056a7ad5e52e1adffc64ef53d12d0724fbc6f458a3af1a4b9e32
